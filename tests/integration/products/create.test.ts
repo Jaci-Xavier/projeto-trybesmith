@@ -19,4 +19,12 @@ describe('POST /products', function () {
        expect(res.body).to.be.an('object');
   });
 
+  // it('testa a função getAll', async function () {
+  //   const res = await chai.request(app)
+  //     .get('/products')
+  //     expect(res).to.have.status(200);
+  //     expect(res.body).to.be.an('array');
+  // }
+  // );
+
 });
