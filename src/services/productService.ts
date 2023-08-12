@@ -5,8 +5,8 @@ const createProduct = async (inputData: Product): Promise<ProductSequelizeModel>
   const product = await productModel.create(inputData);
 
   return product;
-}
+};
 
 export default {
   createProduct,
-}
+};
