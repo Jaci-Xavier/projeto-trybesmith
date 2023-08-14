@@ -1,8 +1,8 @@
 import express from 'express';
 
 import productController from '../controllers/productController';
-import nameVerify from '../middleware/nameVerify';
-import priceVerify from '../middleware/priceVerify';
+import nameVerify from '../middlewares/nameVerify';
+import priceVerify from '../middlewares/priceVerify';
 
 const router = express.Router();
 
