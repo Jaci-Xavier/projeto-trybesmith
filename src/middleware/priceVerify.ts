@@ -1,10 +1,10 @@
 import { Request, Response, NextFunction } from 'express';
 
 const priceVerify = (req: Request, res: Response, next: NextFunction): void | Response => {
-  const price = req.body;
+  const { price } = req.body;
 
-  switch (price) {
-    case !price:
+  switch (true) {
+    case price === undefined:
       return res.status(400).json({ message: '"price" is required' });
     case typeof price !== 'string':
       return res.status(422).json({ message: '"price" must be a string' });

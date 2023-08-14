@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction } from 'express';
 
-const nameVerify = (req: Request, res: Response, next: NextFunction): void | Response => {
-  const name = req.body;
+const nameVerify = (req: Request, res: Response, next: NextFunction): Response | void => {
+  const { name } = req.body;
 
-  switch (name) {
+  switch (true) {
     case !name:
       return res.status(400).json({ message: '"name" is required' });
     case typeof name !== 'string':
